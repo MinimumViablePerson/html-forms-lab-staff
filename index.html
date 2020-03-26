@@ -1,48 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>My Awesome Company Contact Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms, Media and Basic Styling</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <header>
+      <h1>Walkies, Inc.</h1>
+      <h2>For all your dog walking needs</h2>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./form.html">Form</a></li>
+          <li><a href="./media.html">Media</a></li>
+          <li><a href="./styling.html">Styling</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <h1>Company Inc.</h1>
-    <h2>For all your incorporated company needs</h2>
+    <section>
+      <form action="post">
+        <label for="ownername">Owner Name</label>
+        <input type="text" id="ownername" name="ownername" placeholder="Owner Name" required />
 
-    <!-- First, create a form tag where our inputs will be nested -->
+        <label for="email">Owner Email</label>
+        <input type="email" id="email" name="email" placeholder="Owner Email" required />
 
+        <label for="phone">Owner Telephone (optional)</label>
+        <input type="tel" id="phone" name="phone" placeholder="Owner Telephone (optional)" />
 
-      <!-- Add a label for 'fullname'-->
+        <label for="message">Anything we should know about your dog?</label>
+        <textarea id="message" name="message" placeholder="Dog notes"></textarea>
 
-      <!-- Add a text input with the id and name attributes set to 'fullname' -->
-      <!-- Include the place holder text "Enter Name" and make this input required -->
+        <h3>How often do you walk your dog?</h3>
+        <label>
+          Never
+          <input type="radio" name="walk-frequency" value="never" />
+        </label>
 
+        <label>
+          Sometimes
+          <input type="radio" name="walk-frequency" value="sometimes" />
+        </label>
 
-      <!-- Add a label for 'email'-->
+        <label>
+          Every day
+          <input type="radio" name="walk-frequency" value="every-day" />
+        </label>
 
-      <!-- Add a email input with the id and name attributes set to 'email' -->
-      <!-- Include the place holder text "Enter Email" and make this input required -->
+        <h3>What are your dogs favorite toys?</h3>
+        <label>
+          Kong
+          <input type="checkbox" name="toy-1" value="kong" />
+        </label>
 
+        <label>
+          Stuffed Animals
+          <input type="checkbox" name="toy-2" value="stuffed-animals" />
+        </label>
 
-      <!-- Add a label for 'phone'-->
+        <label>
+          Rope Toys
+          <input type="checkbox" name="toy-3" value="rope-toys" />
+        </label>
 
-      <!-- Add a telephone input with the id and name attributes set to 'phone' -->
-      <!-- Include the place holder text "Enter Telephone (optional)" -->
+        <label>
+          Squeaky Toys
+          <input type="checkbox" name="toy-4" value="squeaky-toys" />
+        </label>
 
+        <label>
+          Balls, Frisbees, anything a dog can fetch!
+          <input type="checkbox" name="toy-5" value="balls" />
+        </label>
+        
+        <br />
+        <br />
 
-      <!-- Add a label for 'message'-->
+        <input type="submit" value="Let me walk your dog!" />
+      </form>
+    </section>
 
-      <!-- Add a textarea tag with the id and name attributes set to 'message' -->
-      <!-- Include the place holder text "Enter Message" -->
+    <section>
+      <h2>Media</h2>
 
+      <h3>Audio</h3>
+      <audio controls src="https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3">
+        Your browser does not support the <code>audio</code> element.
+      </audio>
 
-      <!-- Add a checkbox input with the id set to 'checkbox' -->
+      <h3>Video</h3>
+      <video controls width="250">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm" type="video/webm">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4" type="video/mp4">
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+  
+    </section>
 
-
-
-      <!-- Add an input with the type set to 'submit' -->
-
-    
+    <footer>
+      <p>DogWalker ©. All rights reserved.</p>
+    </footer>
   </body>
 </html>
